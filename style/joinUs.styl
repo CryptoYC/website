@@ -1,0 +1,112 @@
+@import './common.stylus';
+
+.joinUs {
+    .welcome {
+        padding: 85px;
+        background: #e6e6e6;
+        margin-bottom: 20px;
+        .margin-bottom {
+            margin-bottom: 20px;
+        }
+
+        .title {
+            color: #d60b0b;
+            font-size: 49px;
+        }
+
+        .text {
+            font-size: 30px;
+        }
+
+        .jobs {
+            color: #fff;
+            background: black;
+            padding: 5px 20px;
+        }
+    }
+
+    .how_join {
+        padding-left: 10%;
+        font-size: 40px;
+    }
+
+    .step_list {
+        padding: 40px 138px;
+
+        .head {
+            background-image: url('/static/images/joinUs/2.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 300px;
+            margin: auto;
+            text-align: center;
+            color: #fff;
+            height: 60px;
+            padding-bottom: 30px;
+            font-size: 20px;
+        }
+
+        .list_item {
+            padding: 100px 130px 100px;
+
+            .title {
+                font-size: 33px;
+                margin-bottom: 40px;
+                color: #f00;
+            }
+
+            .img_item {
+                width: 80%;
+            }
+        }
+    }
+
+    .job_vacancies {
+        .head {
+            background-image: url('/static/images/joinUs/8.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 300px;
+            margin: auto;
+            text-align: center;
+            color: #fff;
+            height: 60px;
+            padding-bottom: 23px;
+            font-size: 20px;
+        }
+    }
+
+    .arrow {
+        display: flex;
+        justify-content: space-between;
+
+        img {
+            transition: transform .5s;
+        }
+
+        .active {
+            transform: rotate(90deg);
+        }
+    }
+
+    .accordion {
+        width: 80%;
+        margin: 20px auto 80px;
+
+        .card {
+            border: none;
+            border-bottom: 1px solid #bdafaf;
+            .collapse{
+                background: #fff;
+                }
+            .card-header{
+                 border: none;
+                background: #fff}
+            .card-body{
+                .job_vacancies_foot{
+                    margin-top: 20px
+                }    
+            }
+        }
+    }
+}

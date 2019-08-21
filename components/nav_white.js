@@ -26,9 +26,9 @@ const GetEle = ({arr,t}) => {
           <a className="item">{t(e.text)}</a>
         </Link></Col>
     } else {
-      return <Col className="row_center" key={e.text}><NavDropdown title={t(e.text)} className="item" className="select">{
+      return <Col className="row_center" key={e.text}><NavDropdown title={t(e.text)} className="item select" id="basic-nav-dropdown">{
         e.child.map(ee => {
-          return <NavDropdown.Item key={ee.text} as='div' >
+          return <NavDropdown.Item key={ee.text} as='div'>
             <Link href={{ pathname: ee.link }}>
               <a className="item">{t(ee.text)}</a>
             </Link>
@@ -39,12 +39,12 @@ const GetEle = ({arr,t}) => {
   })
 }
 const myNav = ({t}) => {
-  console.log(i18n)
+  // console.log(i18n)
     const changeI18=()=>{
       
       const i18Arr=['en','cn']
       const type =i18Arr.filter(e=>e!=i18n.language)[0]
-      console.log(type)
+      // console.log(type)
       i18n.changeLanguage(type)
     }
     return  <Container fluid="true">
@@ -56,12 +56,11 @@ const myNav = ({t}) => {
           </a>
         </Link>
       </Col>
-      <Col sm="8" className="list">
+      <Col sm="8" className="list float-right">
         <Row className="mobile_colum">
-          < GetEle arr={navArr} t={t}></GetEle>
-          <Col sm={{ span: 2, offset: 1 }} className="i18">
-            <button style={{color: '#fff'}} onClick={changeI18}>中文/EN
-            </button>
+            < GetEle arr={navArr} t={t}></GetEle>
+          <Col className="i18">
+            <button style={{color: '#fff', width: '100%'}} onClick={changeI18}>中文 EN</button>
           </Col>
         </Row>
 

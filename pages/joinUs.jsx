@@ -15,7 +15,7 @@ class Arrow extends Component {
     changeArrow = () => {
         const { arrow } = this.state
         this.setState({ arrow: !arrow })
-        console.log(123, this.state)
+        // console.log(123, this.state)
     }
     render() {
         const { arrow } = this.state

@@ -14,13 +14,14 @@ const GetIcon = (arr) => {
     spaceArr.push(1)
   }
   return arr.map((e, index) => {
-    return <React.Fragment><Col key={e} sm="2" className="column_center row_center icon_padding">
-      <a rel="stylesheet" href={otherRouterConst[e] ? otherRouterConst[e].link : ''}>
-        <div className={`back_${e}`} ></div>
-      </a>
-    </Col>
-      {length < 5 && (index + 1 == length) && spaceArr.map(ee => {
-        return <Col key={e} sm="2" style={{ background: 'none' }} className="column_center row_center icon_padding"></Col>
+    return <React.Fragment >
+      <div key={e} className="column_center row_center icon_bg" style={{ width: 183, height: 183 }}>
+        <a rel="stylesheet" href={otherRouterConst[e] ? otherRouterConst[e].link : ''}>
+          <div className={`back_${e}`} ></div>
+        </a>
+      </div>
+      {length < 5 && (index + 1 == length) && spaceArr.map(e => {
+        return <Col key={e} sm="2" style={{ background: 'none' }} className="column_center row_center icon_bg"></Col>
       })}
     </React.Fragment>
   })
@@ -72,24 +73,27 @@ const Home = ({ t }) => (
     <Head></Head>
     <MyNav />
     <div className="contain_text">
+      <div className="text">{t('sam_1')}</div>
       <div className="text">{t('sam_2')}</div>
       <div className="text color_red"><Animate_text text={[t('sam_3'), t('sam_4')]}></Animate_text></div>
     </div>
-    <Row className="list_item margin_top">
-      <Col sm="5" className="column_center">
-        <div>{t('believe_1')}</div>
-        <div>{t('believe_2')}</div>
+    <Row className="list_item">
+      <Col sm="9" className="column_center w-100">
+        <div className='believe'>{t('believes')}</div>
+        <div className='w-100'>{t('believe_1')}</div>
+        <div className='w-100'>{t('believe_2')}</div>
       </Col>
-      <Col sm={{ span: 5, offset: 2 }} className="column_center flex-right"><img className="images" src="/static/images/index/01.png"></img></Col>
+      <Col sm={{ span: 3 }} className="column_center flex-right"><img className="images" src="/static/images/index/01.png"></img></Col>
     </Row>
-    <Row className="list_item background_ece">
-      <Col sm="5" className="column_center">
+    <Row className="list_item background_ece" style={{ paddingTop: 254, paddingLeft: 303, paddingBottom: 160 }}>
+      <Col sm="3" className="column_center">
         <img className="images" src="/static/images/index/02.png"></img>
       </Col>
-      <Col sm={{ span: 5, offset: 2 }} className="column_center">
-        <div className="title text_right">{t('title_1')}</div>
+      <Col sm="1"></Col>
+      <Col sm={{ span: 8 }} className="column_center">
+        <div className="title text-right believe">{t('title_1')}</div>
         <div className="text">{t('text_1')}</div>
-        <div className="text_right" >
+        <div className="text_right text-right" >
           <button className="button" onClick={() => { toOther('/benchmark') }}>{t('button_1')} <span className="arrow">></span></button>
         </div>
       </Col>
@@ -103,16 +107,16 @@ const Home = ({ t }) => (
       </Col>
       <Col sm={{ span: 5, offset: 2 }} className="column_center flex-right"><img className="images" src="/static/images/index/03.png"></img></Col>
     </Row> */}
-    <div className="list_item ">
-      <div className="title ">{t('title_3')}</div>
-      <Row className="flex_space-between">
-        {GetIcon([1, 2, 3, 4, 5])}
-      </Row>
-      <Row className="flex_space-between margin-top_20">
-        {GetIcon([6, 7, 8, 9, 10])}
-      </Row>
+    <div className="list_item " style={{ paddingTop: 135, paddingBottom: 186 }}>
+      <div className="title believe" style={{ marginBottom: 83 }}>{t('title_3')}</div>
+      <div className="icon-box">
+        {GetIcon([1, 2, 3, 4, 5, 6, 7])}
+      </div>
+      <div className="margin-top_20 icon-box">
+        {GetIcon([8, 9, 10, 11, 12, 13, 14])}
+      </div>
     </div>
-    <div className="list_item background_ece">
+    <div className="list_item background_ece" style={{ paddingTop: 120, paddingBottom: 120 }}>
       <div className="title ">{t('title_4')}</div>
       <div>
         {t('foot1')}
@@ -120,7 +124,7 @@ const Home = ({ t }) => (
       <div>
       {t('foot2')}
       </div>
-      <button className="button" onClick={() => { toOther('/contactUs') }}>{t('email')}<span className="arrow">></span></button>
+      <button style={{marginTop: 30}} className="button" onClick={() => { toOther('/contactUs') }}>{t('email')}<span className="arrow">></span></button>
     </div>
     <MyFoot></MyFoot>
   </div>

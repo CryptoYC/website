@@ -16,15 +16,16 @@ const GetIcon = arr => {
   return arr.map((e, index) => {
     return (
       <React.Fragment>
-        <Col key={e} className="column_center row_center icon_padding">
+        <Col sm="2" key={e} className="icon_padding">
           <a
+            className="d-block icon_image"
             rel="stylesheet"
             href={otherRouterConst[e] ? otherRouterConst[e].link : ""}
           >
             <div className={`back_${e}`} />
           </a>
         </Col>
-        {length < 5 &&
+        {/* {length < 6 &&
           index + 1 == length &&
           spaceArr.map(ee => {
             return (
@@ -35,7 +36,7 @@ const GetIcon = arr => {
                 className="column_center row_center icon_padding"
               />
             );
-          })}
+          })} */}
       </React.Fragment>
     );
   });

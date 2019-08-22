@@ -1,82 +1,93 @@
 @import './common.stylus';
 
 .group {
-    .head {
-        position: relative;
+  .head {
+    position: relative;
 
-        .content {
-            position: absolute;
-            color: #fff;
-            left: 10%;
-            top: 20%;
+    .content {
+      color: #fff;
 
-            .title {
-                color: #dc2f2f;
-                font-size: 80px;
-                margin-bottom: 30px;
-            }
+      .title {
+        color: #D63B45;
+        font-size: 80px;
+        margin-bottom: 30px;
+      }
 
-            .text {
-                margin-top: 10px;
-                font-size: 21px;
-                width: 60%;
-            }
-        }
+      .text {
+        margin-top: 10px;
+        font-size: 21px;
+        width: 60%;
+      }
+    }
+  }
+
+  .people-name {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .people-info {
+    margin-top: 4px;
+    font-size: 14px;
+  }
+
+  .head_text {
+    background: #e4e4e4;
+    padding: 120px 140px;
+
+    .text {
+      font-size: 22px;
+      margin-top: 10px;
+    }
+  }
+
+  .list_item {
+    padding: 40px 140px;
+
+    &:nth-child(2n) {
+      padding-bottom: 80px;  
     }
 
-    .head_text {
-        background: #e4e4e4;
-        padding: 120px 140px;
+    .title {
+      font-size: 50px;
+      margin-bottom: 40px;
+    }
+
+    .icon_padding {
+      padding: 0px 0px;
+      background: none;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .active {
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      z-index: 99;
+
+      .people {
+        height: 100%;
 
         .text {
-            font-size: 22px;
-            margin-top: 10px;
+          color: #fff;
+          z-index: 33;
+          height: 100%;
+          overflow: auto;
+          padding: 20px;
         }
+
+        .msk {
+          height: 100%;
+          background: #D63B45;
+          opacity: 0.4;
+          width: 100%;
+          position: absolute;
+          left: 0px;
+          z-index: -1;
+          top: 0px;
+        }
+      }
     }
-
-    .list_item {
-        padding: 100px 140px;
-
-        .title {
-            position: relative;
-            right: 50px;
-            font-size: 60px;
-        }
-
-        .icon_padding {
-            padding: 0px 0px;
-            background: none;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .active {
-            height: 100%;
-            width: 100%;
-            position: absolute;
-            z-index: 99;
-
-            .people {
-                height: 100%;
-                .text {
-                    color: #fff;
-                    z-index: 33;
-                    height: 100%;
-                    overflow: auto;
-                    padding: 20px
-                }
-
-                .msk {
-                    height: 100%;
-                    background: red;
-                    opacity: 0.4;
-                    width: 100%;
-                    position: absolute;
-                    left: 0px;
-                    z-index: -1;
-                    top: 0px;
-                }
-            }
-        }
-    }
+  }
 }

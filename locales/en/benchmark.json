@@ -1,15 +1,16 @@
 {
-    "title": "CryptoYC Benchmark is a technical due diligence research system for blockchain projects, which has been under test and development for nearly one year. CryptoYC Benchmark conducts multi-dimensional tests targeting different technical indicators including consensus, security, performance, technological innovation, etc., to directly reveal the nature of the project’s technical ability. Based on real data, we carry out one of the most rational and objective technical due diligence on blockchain projects. CryptoYC commits to establish for investors their first risk-resistant tool and to be their expert of understanding technology of the projects. ",
-    "title_1":"Unique Test System",
-    "text_1":"Blockchain Due Diligence which has been under development for almost one year ",
-    "title_2":"Actual and objective data",
-    "text_2":"Test data are drawn from on-chain which was open-sourced by projects",
-    "title_3":"Vast network of nodes",
-    "text_3":"We use nearly 60 nodes distributed in Amsterdam, London, NY, Paris, Tokyo, North Carlifornia, Middle Canada, etc. To test projects",
-    "title_4":"Multi-dimensional indicators",
-    "text_4":"Multi-dimensional tests from various tech indicators, consensus, security, performance, innovation to directly clarify the key features of projects ",
-    "example":"Sample report",
-    "solve":"Solve core problems in value investing for you ",
-    "contact":" Contact us",
-    "submit":" Submit applications" 
-  }
+  "big_title": "Benchmark",  
+  "title": "CryptoYC Benchmark is a technical due diligence research system for blockchain projects, which has been under test and development for nearly one year. CryptoYC Benchmark conducts multi-dimensional tests targeting different technical indicators including consensus, security, performance, technological innovation, etc., to directly reveal the nature of the project’s technical ability. Based on real data, we carry out one of the most rational and objective technical due diligence on blockchain projects. CryptoYC commits to establish for investors their first risk-resistant tool and to be their expert of understanding technology of the projects. ",
+  "title_1":"Unique Test System",
+  "text_1":"Blockchain Due Diligence which has been under development for almost one year ",
+  "title_2":"Actual and objective data",
+  "text_2":"Test data are drawn from on-chain which was open-sourced by projects",
+  "title_3":"Vast network of nodes",
+  "text_3":"We use nearly 60 nodes distributed in Amsterdam, London, NY, Paris, Tokyo, North Carlifornia, Middle Canada, etc. To test projects",
+  "title_4":"Multi-dimensional indicators",
+  "text_4":"Multi-dimensional tests from various tech indicators, consensus, security, performance, innovation to directly clarify the key features of projects ",
+  "example":"Sample report",
+  "solve":"Solve core problems in value investing for you ",
+  "contact":" Contact us",
+  "submit":" Submit applications" 
+}

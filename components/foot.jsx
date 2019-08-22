@@ -54,7 +54,7 @@ class Home extends React.Component {
                 <Nav.Link className="item">FAQ</Nav.Link>
               </div>
             </Col>
-            <Col sm="2" />
+            <Col sm="2"/>
             <Col sm="2">
               <div className="title">{t("contain")}</div>
               <div className="content">
@@ -85,7 +85,7 @@ class Home extends React.Component {
                 {/* <Link href='/aboutUs'><a className='item'> {t('aboutUs')}</a></Link> */}
               </div>
             </Col>
-            <Col sm={{ span: "2", offset: 0 }}>
+            <Col sm="2">
               <div className="title ">{t("payAttention")}</div>
               <Row className="icon_list ">
                 <Col sm="3" className="icon_item">

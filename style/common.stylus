@@ -1,7 +1,7 @@
 /* 公共样式 */
-body {
-  min-width: 1450px;
-}
+// body {
+//   min-width: 1450px;
+// }
 
 .center {
   display: flex;
@@ -13,6 +13,11 @@ body {
 ::-webkit-scrollbar {
   /* 隐藏滚轮 */
   // display: none;
+}
+
+.row {
+  margin-left: 0;
+  margin-right: 0;
 }
 
 input:-webkit-autofill {
@@ -159,10 +164,9 @@ button {
 back_img_size = 10.9vw
 for i in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 {
   .back_{i} {
-    // width back_img_size;
-    // height back_img_size;
-    height: 123px;
-    width: 123px;
+    height: 163px;
+    width: 163px;
+    margin: 25px;
     max-width: back_img_size;
     max-height: back_img_size;
     background-size: contain;
@@ -172,8 +176,17 @@ for i in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 {
   }
 
   .back_{i}:hover {
-    height: 123px;
-    width: 123px;
+    height: 163px;
+    width: 163px;
+    margin: 25px;
     background-image: url('/static/images/index/new/' + i + '_.png');
+  }
+
+  @media only screen and (max-width: 1600px) {
+    .back_{i}, .back_{i}:hover {
+      height: 105px;
+      width: 105px;
+      margin: 15px;
+    }
   }
 }

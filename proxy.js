@@ -21,11 +21,11 @@ app.prepare()
 
   const proxyTable = {
     '/api': {
-            target: 'http://40.74.141.217:8080',
-            secure: false,
-            pathRewrite: {'^/api' : ''},
-            changeOrigin: true
-        }
+      target: 'http://40.74.141.217:8080',
+      secure: false,
+      pathRewrite: {'^/api' : ''},
+      changeOrigin: true
+    }
   }
 
   // proxy api requests

@@ -66,7 +66,7 @@ const map={
       "link": "https://www.cryptoyc.com"
     },
     "23":{
-      "link": "https://www.cryptoyc.com"
+      "link": "/submit"
     },
     "24":{
       "link": "https://www.cryptoyc.com"

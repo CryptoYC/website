@@ -103,9 +103,10 @@ const Home = ({ t }) => (
         <Animate_text text={[t("sam_3"), t("sam_4")]} />
       </div>
     </div>
+
     <Row className="list_item">
-      <Col sm="9" className="column_center w-100">
-        <div className="believe">{t("believes")}</div>
+      <div className="believe w-75">{t("believes")}</div>
+      <Col sm="9" className="column_center w-100"> 
         <div className="w-100">{t("believe_1")}</div>
         <div className="w-100">{t("believe_2")}</div>
       </Col>
@@ -117,12 +118,12 @@ const Home = ({ t }) => (
       className="list_item background_ece"
       style={{ paddingTop: 254, paddingLeft: 303, paddingBottom: 160 }}
     >
+      <div className="title text-right believe">{t("title_1")}</div>
       <Col sm="3" className="column_center">
         <img className="images" src="/static/images/index/02.png" />
       </Col>
       <Col sm="1" />
       <Col sm={{ span: 8 }} className="column_center">
-        <div className="title text-right believe">{t("title_1")}</div>
         <div className="text">{t("text_1")}</div>
         <div className="text_right text-right">
           <button

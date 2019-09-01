@@ -10,6 +10,7 @@ const Head = props => (
   <NextHead>
     <meta charSet="UTF-8" />
     <title content={props.title}></title>
+    <link rel="shortcut icon" href="/static/favicon.ico" />
     <link
       rel="stylesheet"
       href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"

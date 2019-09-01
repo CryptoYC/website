@@ -3,10 +3,17 @@ import "style/investment.styl";
 import MyNav from "c/nav_white";
 import Head from "c/head";
 import MyFoot from "c/foot";
-import { Row, Col, Nav } from "react-bootstrap";
-
-import otherRouterConst from "../otherRouterConst";
+import { Row, Col } from "react-bootstrap";
 import { withNamespaces } from "react-i18next";
+
+const URL = [
+  "https://bitcoin.org", "https://ethereum.org", "https://eos.io", "https://obyte.org","https://iota.org",
+  "https://filecoin.io", "http://idni.org", "https://kyber.network", "https://z.cash", "https://sia.tech",
+  "https://liquid.com", "https://gate.io", "https://polkadot.network", "https://qtum.org", "https://nervos.org",
+  "https://bitcoincash.org","https://tezos.com","https://chaoex.com","https://bitrabbit.com","https://sfex.net",
+  "", "", "http://candaq.com", "https:// sky.io", "http://tezas.com"
+];
+
 const GetIcon = arr => {
   const length = arr.length;
   const spaceArr = [];
@@ -16,27 +23,16 @@ const GetIcon = arr => {
   return arr.map((e, index) => {
     return (
       <React.Fragment>
-        <Col key={e} sm="2" className="column_center row_center icon_padding">
-          {otherRouterConst[e] && otherRouterConst[e].link ? (
-            <a rel="stylesheet" href={otherRouterConst[e].link}>
-              <div className={`back_${e}`} />
-            </a>
-          ) : (
-            <div className={`back_${e}`} />
-          )}
-        </Col>
-        {length < 5 &&
-          index + 1 == length &&
-          spaceArr.map(ee => {
-            return (
-              <Col
-                key={`${index}_${ee}`}
-                sm="2"
-                style={{ background: "none" }}
-                className="column_center row_center icon_padding"
-              />
-            );
-          })}
+        {e ? 
+        (<div key={e} className="column_center row_center icon_bg">
+          <a rel="stylesheet" href={URL[e]}>
+            <div className={`back_investment_${e}`} />
+          </a>
+        </div>) : (
+          <div className="column_center row_center icon_bg" style={{ visibility: 'hidden'}}>
+            <div className={`back_investment_1`} />
+          </div>
+        )}
       </React.Fragment>
     );
   });
@@ -65,14 +61,16 @@ const Investment = ({ t }) => (
     </div>
     <div className="list_item">
       <div className="title">{t("PARTNERSHIP")}</div>
-      <Row className="flex_space-between">{GetIcon([13, 14, 15, 16, 17])}</Row>
-      <Row className="flex_space-between">{GetIcon([18])}</Row>
+      <div className="icon-box">{GetIcon([18, 19, 20, 21, 22])}</div>
+      <div className="icon-box">{GetIcon([23, 24, 25, '', ''])}</div>
     </div>
-    <div className="list_item">
+    <div className="list_item" style={{paddingBottom: 120}}>
       <div className="title">{t("INVESTMENTS")}</div>
-      <Row className="flex_space-between">{GetIcon([1, 2, 3, 4, 5])}</Row>
-      <Row className="flex_space-between">{GetIcon([6, 7, 8, 9, 19])}</Row>
-      <Row className="flex_space-between">{GetIcon([11, 12])}</Row>
+      <div className="icon-box">{GetIcon([1, 2, 3, 4, 5, 6, 7])}</div>
+      <div className="icon-box">{GetIcon([8, 9, 10, 11, 12, 13, 14])}</div>
+      <div className="icon-box">
+        {GetIcon([15, 16, 17, '', '', '', ''])}
+      </div>
     </div>
 
     <MyFoot />

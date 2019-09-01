@@ -36,7 +36,7 @@ import {about_contact} from 'root/request'
             <Head></Head>
             <MyNav></MyNav>
             <div className="head">
-                <img src="/static/images/contactUs/0.png" alt="" />
+                <img src="/static/images/contactUs/0.jpg" alt="" />
                 <div className="content">
                     <div className="title">{t('contactUs')}</div>
                 </div>

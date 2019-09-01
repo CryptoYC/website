@@ -1,24 +1,24 @@
 const map={
     '13':{
-        link:'https://www.chaoex.com/'
+        link:'https://polkadot.network'
     },
     '18':{
         link:'http://candaq.com/'
     },
     '16':{
-        link:''
+        link:'https://bitcoincash.org'
     },
     '17':{
-        link:''
+        link:'https://tezos.com'
     },
     10:{
       link:'/investment'
     },
     '14':{
-        link:'https://bitrabbit.com'
+        link:'https://qtum.org'
     },
     '15':{
-        link:'https://sfex.net/'
+        link:'https://nervos.org'
     },
     "1": {
       "link": "https://bitcoin.org"
@@ -30,7 +30,7 @@ const map={
       "link": "https://kyber.network/"
     },
     "5": {
-      "link": "https://filecoin.io/"
+      "link": "https://iota.org/"
     },
     "12": {
       "link": "https://polkadot.network/"
@@ -39,22 +39,22 @@ const map={
       "link": "https://www.liquid.com/"
     },
     "7": {
-      "link": "https://eos.io/"
+      "link": "http://idni.org/"
     },
     "3": {
-      "link": "https://obyte.org/"
+      "link": "https://eos.io/"
     },
     "19": {
       "link": "https://sia.tech/"
     },
     "4": {
-      "link": "https://www.iota.org/"
+      "link": "https://www.obyte.org/"
     },
     "2": {
       "link": "https://www.ethereum.org/"
     },
     "6": {
-      "link": "http://www.idni.org/agoras/"
+      "link": "http://filecoin.io/"
     },
     "20":{
       "link": "https://www.cryptoyc.com"

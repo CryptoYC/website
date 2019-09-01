@@ -30,7 +30,7 @@ const AboutUs = ({ t }) => {
           alt=""
         />
         <Row>
-          <Col sm={{ span: 12 }} className="border-bottom flex_space">
+          <Col sm={{ span: 12 }} className="border-bottom flex_space p-0">
             <Link href="/contactUs">
               <a>
                 <Row>

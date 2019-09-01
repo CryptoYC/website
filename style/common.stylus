@@ -118,7 +118,7 @@ button {
 
 .flex_space-between {
   margin-top: 20px;
-  justify-content: star;
+  justify-content: start;
 }
 
 .head {

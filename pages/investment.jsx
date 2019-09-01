@@ -7,11 +7,31 @@ import { Row, Col } from "react-bootstrap";
 import { withNamespaces } from "react-i18next";
 
 const URL = [
-  "https://bitcoin.org", "https://ethereum.org", "https://eos.io", "https://obyte.org","https://iota.org",
-  "https://filecoin.io", "http://idni.org", "https://kyber.network", "https://z.cash", "https://sia.tech",
-  "https://liquid.com", "https://gate.io", "https://polkadot.network", "https://qtum.org", "https://nervos.org",
-  "https://bitcoincash.org","https://tezos.com","https://chaoex.com","https://bitrabbit.com","https://sfex.net",
-  "", "", "http://candaq.com", "https:// sky.io", "http://tezas.com"
+  "https://bitcoin.org", 
+  "https://ethereum.org", 
+  "https://eos.io", 
+  "https://obyte.org",
+  "https://iota.org",
+  "https://filecoin.io", 
+  "http://idni.org", 
+  "https://kyber.network", 
+  "https://z.cash", 
+  "https://sia.tech",
+  "https://liquid.com", 
+  "https://gate.io", 
+  "https://polkadot.network", 
+  "https://qtum.org", 
+  "https://nervos.org",
+  "https://bitcoincash.org",
+  "https://tezos.com",
+  "https://chaoex.com",
+  "https://bitrabbit.com",
+  "https://sfex.net",
+  "", 
+  "", 
+  "http://candaq.com", 
+  "https://sky.io", 
+  "http://tezas.com"
 ];
 
 const GetIcon = arr => {
@@ -25,7 +45,7 @@ const GetIcon = arr => {
       <React.Fragment>
         {e ? 
         (<div key={e} className="column_center row_center icon_bg">
-          <a rel="stylesheet" href={URL[e]}>
+          <a rel="stylesheet" href={URL[e-1]}>
             <div className={`back_investment_${e}`} />
           </a>
         </div>) : (
@@ -68,9 +88,7 @@ const Investment = ({ t }) => (
       <div className="title">{t("INVESTMENTS")}</div>
       <div className="icon-box">{GetIcon([1, 2, 3, 4, 5, 6, 7])}</div>
       <div className="icon-box">{GetIcon([8, 9, 10, 11, 12, 13, 14])}</div>
-      <div className="icon-box">
-        {GetIcon([15, 16, 17, '', '', '', ''])}
-      </div>
+      <div className="icon-box">{GetIcon([15, 16, 17, '', '', '', ''])}</div>
     </div>
 
     <MyFoot />

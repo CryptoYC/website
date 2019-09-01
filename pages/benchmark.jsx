@@ -148,7 +148,6 @@ const Benchmark = ({ t }) => {
           </Col>
         </Row>
       </div>
-
       <MyFoot />
     </div>
   );

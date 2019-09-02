@@ -27,25 +27,25 @@ const map = {
     "link": "https://z.cash"
   },
   '10': {
-    link: 'https://sia.tech'
+    'link': 'https://sia.tech'
   },
   '11': {
-    link: 'https://liquid.com'
+    'link': 'https://liquid.com'
   },
   '12': {
-    link: 'https://gate.io'
+    'link': 'https://gate.io'
   },
   '13': {
-    link: 'https://polkadot.network'
+    'link': 'https://polkadot.network'
   },
   '14': {
-    link: '/investment'
+    'link': '/investment'
   },
   '17': {
-    link: 'https://tezos.com'
+    'link': 'https://tezos.com'
   },
   '18': {
-    link: 'https://www.cryptoyc.com'
+    'link': 'https://www.cryptoyc.com'
   },
   '19': {
     'link': 'https://www.cryptoyc.com'

@@ -7,30 +7,30 @@ import { Row, Col } from "react-bootstrap";
 import { withNamespaces } from "react-i18next";
 
 const URL = [
-  "https://bitcoin.org", 
-  "https://ethereum.org", 
-  "https://eos.io", 
+  "https://bitcoin.org",
+  "https://ethereum.org",
+  "https://eos.io",
   "https://obyte.org",
   "https://iota.org",
-  "https://filecoin.io", 
-  "http://idni.org", 
-  "https://kyber.network", 
-  "https://z.cash", 
+  "https://filecoin.io",
+  "http://idni.org",
+  "https://kyber.network",
+  "https://z.cash",
   "https://sia.tech",
-  "https://liquid.com", 
-  "https://gate.io", 
-  "https://polkadot.network", 
-  "https://qtum.org", 
+  "https://liquid.com",
+  "https://gate.io",
+  "https://polkadot.network",
+  "https://qtum.org",
   "https://nervos.org",
   "https://bitcoincash.org",
   "https://tezos.com",
   "https://chaoex.com",
   "https://bitrabbit.com",
   "https://sfex.net",
-  "", 
-  "", 
-  "http://candaq.com", 
-  "https://sky.io", 
+  "",
+  "",
+  "http://candaq.com",
+  "https://sky.io",
   "http://tezas.com"
 ];
 
@@ -43,16 +43,16 @@ const GetIcon = arr => {
   return arr.map((e, index) => {
     return (
       <React.Fragment>
-        {e ? 
-        (<div key={e} className="column_center row_center icon_bg">
-          <a rel="stylesheet" href={URL[e-1]}>
-            <div className={`back_investment_${e}`} />
-          </a>
-        </div>) : (
-          <div className="column_center row_center icon_bg" style={{ visibility: 'hidden'}}>
-            <div className={`back_investment_1`} />
-          </div>
-        )}
+        {e ?
+          (<div key={e} className="column_center row_center icon_bg">
+            <a rel="stylesheet" href={URL[e - 1]}>
+              <div className={`back_investment_${e}`} />
+            </a>
+          </div>) : (
+            <div className="column_center row_center icon_bg" style={{ visibility: 'hidden' }}>
+              <div className={`back_investment_1`} />
+            </div>
+          )}
       </React.Fragment>
     );
   });
@@ -81,10 +81,10 @@ const Investment = ({ t }) => (
     </div>
     <div className="list_item">
       <div className="title">{t("PARTNERSHIP")}</div>
-      <div className="icon-box">{GetIcon([18, 19, 20, 21, 22])}</div>
-      <div className="icon-box">{GetIcon([23, 24, 25, '', ''])}</div>
+      <div className="icon-box">{GetIcon([18, 19, 20, 21, 22, 23, 24])}</div>
+      <div className="icon-box">{GetIcon([25, '', '', '', '', '', ''])}</div>
     </div>
-    <div className="list_item" style={{paddingBottom: 120}}>
+    <div className="list_item" style={{ paddingBottom: 120 }}>
       <div className="title">{t("INVESTMENTS")}</div>
       <div className="icon-box">{GetIcon([1, 2, 3, 4, 5, 6, 7])}</div>
       <div className="icon-box">{GetIcon([8, 9, 10, 11, 12, 13, 14])}</div>

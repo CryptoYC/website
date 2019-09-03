@@ -20,7 +20,7 @@ const AboutUs = ({ t }) => {
           <div className="text">{t("do")}</div>
         </div>
       </div>
-      <div className="contain_body text-center">
+      <div className="contain_body text-center mx-auto" style={{ width: '98%'}}>
         <img
           src={
             i18n.language == "en"

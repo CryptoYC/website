@@ -17,10 +17,9 @@ class Submit extends React.Component {
   }
 
   fetch = () => {
-    console.log('fetch benchmark')
-    axios.get('http://40.74.141.217:8080/survey/report').then(res => {
+    axios.get('http://cryptoyc.com:8081/survey/report').then(res => {
       this.setState({
-        dataSource: res.data
+        dataSource: res.data.list
       });
     })
   }

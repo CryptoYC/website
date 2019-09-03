@@ -20,7 +20,7 @@ const url = str => {
   // }else{
   //     return `/${str}`
   // }
-  return `http://40.74.141.217:8080/${str}`;
+  return `http://cryptoyc.com:8081/${str}`;
 };
 
 export const survey_project = obj => {

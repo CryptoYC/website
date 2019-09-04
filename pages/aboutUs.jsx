@@ -14,13 +14,13 @@ const AboutUs = ({ t }) => {
       <Head />
       <MyNav />
       <div className="head">
-        <img src="/static/images/aboutUs/0.png" alt="" />
+        <img src="/static/images/aboutUs/0.png" alt=""/>
         <div className="content">
           <div className="title">{t("Whatwedo")}</div>
           <div className="text">{t("do")}</div>
         </div>
       </div>
-      <div className="contain_body text-center mx-auto" style={{ width: '98%'}}>
+      <div className="contain_body text-center mx-auto" style={{ width: '90%'}}>
         <img
           src={
             i18n.language == "en"

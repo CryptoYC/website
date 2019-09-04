@@ -114,8 +114,8 @@ class Home extends React.Component {
             </Col>
           </Row>
           <Row className="logo justify-content-between">
-            <Col className='pl-0' style={{marginTop: 53}} sm={{ span: 4 }}>@2019 CryptoYC.ALL RIGHTS Reserved</Col>
-            <Col className='text-right pr-0' style={{marginTop: 43}} sm={{ span: 4 }}>
+            <Col className='pl-0' style={{marginTop: 53}} sm={{ span: 9 }}>@2019 CryptoYC.ALL RIGHTS Reserved</Col>
+            <Col className='text-right pr-0' style={{marginTop: 43}} sm={{ span: 3 }}>
               <button onClick={changeI18}>中文 EN </button>
             </Col>
           </Row>

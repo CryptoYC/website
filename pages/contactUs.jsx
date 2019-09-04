@@ -35,9 +35,9 @@ import {about_contact} from 'root/request'
         return <div className="contactUs">
             <Head></Head>
             <MyNav></MyNav>
-            <div className="head">
+            <div className="head"  style={{height: 'auto'}}>
                 <img src="/static/images/contactUs/0.jpg" alt="" />
-                <div className="content">
+                <div className="content" style={{left: '10%', top: '50%'}}>
                     <div className="title">{t('contactUs')}</div>
                 </div>
             </div>

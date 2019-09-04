@@ -20,7 +20,7 @@ const url = str => {
   // }else{
   //     return `/${str}`
   // }
-  return `http://cryptoyc.com:8081/${str}`;
+  return `https://cryptoyc.net/${str}`;
 };
 
 export const survey_project = obj => {

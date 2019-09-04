@@ -17,7 +17,7 @@ class Submit extends React.Component {
   }
 
   fetch = () => {
-    axios.get('http://cryptoyc.com:8081/survey/report').then(res => {
+    axios.get('https://cryptoyc.net/survey/report').then(res => {
       this.setState({
         dataSource: res.data.list
       });

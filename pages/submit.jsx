@@ -7,9 +7,13 @@ import { Table, InputGroup, FormControl, Button } from "react-bootstrap";
 import { withNamespaces } from "react-i18next";
 import axios from 'axios';
 
+const COUNT = 10;
+
 class Submit extends React.Component {
   state = {
     dataSource: [],
+    pageNo: 1,
+    pageSize: 0,
   }
 
   componentDidMount() {
@@ -17,11 +21,20 @@ class Submit extends React.Component {
   }
 
   fetch = () => {
-    axios.get('https://cryptoyc.net/survey/report').then(res => {
-      this.setState({
-        dataSource: res.data.list
-      });
-    })
+    this.setState({
+      pageSize: this.state.pageSize + COUNT,
+    }, () => {
+      axios.get(`https://cryptoyc.net/survey/report`, {
+        params: {
+          pageNo: this.state.pageNo,
+          pageSize: this.state.pageSize
+        }
+      }).then(res => {
+        this.setState({
+          dataSource: res.data.data.list || []
+        });
+      })  
+    });
   }
 
   render() {

@@ -62,7 +62,7 @@ class ProjectSubmitted extends Component {
       <div className="projectSubmitted">
         <Head />
         <MyNav />
-        <div className="head">
+        <div className="head"  style={{height: 'auto'}}>
           {" "}
           <img src="/static/images/benchmark/12.gif" alt="" />
         </div>

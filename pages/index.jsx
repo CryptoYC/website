@@ -106,7 +106,7 @@ const Home = ({ t }) => (
 
     <Row className="list_item background_ece">
       <div className="believe w-75">{t("believes")}</div>
-      <Col sm="9" className="column_center w-100"> 
+      <Col sm="9" className="column_center w-100 pl-0"> 
         <div className="w-100">{t("believe_1")}</div>
         <div className="w-100">{t("believe_2")}</div>
       </Col>
@@ -116,7 +116,7 @@ const Home = ({ t }) => (
     </Row>
     <Row
       className="list_item"
-      style={{ paddingTop: 254, paddingLeft: 303, paddingBottom: 160 }}
+      style={{ paddingTop: 104, paddingLeft: 303, paddingBottom: 60 }}
     > 
       <Col sm="3" className="column_center">
         <img className="images" src="/static/images/index/02.png" style={{marginTop: 120}} />

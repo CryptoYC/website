@@ -45,7 +45,7 @@ class Submit extends React.Component {
       <div className="submit">
         <Head />
         <MyNav />
-        <div className="head">
+        <div className="head" style={{height: 'auto'}}>
           <img src="/static/images/submit/1.jpg" alt="" />
           <div className="content">
             <div className="title">Benchmark</div>

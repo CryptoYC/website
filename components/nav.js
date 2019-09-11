@@ -4,7 +4,7 @@ import { NavDropdown, Nav, Container, Row, Col } from 'react-bootstrap';
 import 'style/components/nav.styl'
 const navArr = [
   { type: 'string', text: '主页', link: '/' },
-  { type: 'string', text: '尽调', link: '/projectSubmitted' },
+  { type: 'string', text: '尽调', link: '/proSubDetail' },
   { type: 'string', text: '社区', link: '/community' },
   { type: 'string', text: '投资', link: '/investment' },
   { type: 'string', text: '博客', },

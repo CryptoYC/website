@@ -32,7 +32,7 @@ import 'style/proSubDetail.styl'
         if(code == 200){
           console.log('getDetail: ', data)
           that.setState({
-            detail: data || {},
+            detail: data || {name: ''},
             content: data.content
           })
         } else {
@@ -46,7 +46,7 @@ import 'style/proSubDetail.styl'
 
     render() {
         const {t}=this.props
-        const { content } = this.state
+        const { detail, content } = this.state
         return <div className="proSubDetail">
             <Head></Head>
             <MyNav></MyNav>
@@ -58,7 +58,7 @@ import 'style/proSubDetail.styl'
                 </div>
               </div>
               <div className='detail'>
-                <div className='title'>EVOLAB Benchmark | Cardano项目技术尽调</div>
+                {/* <div className='title'>{detail.name}</div> */}
                 <div dangerouslySetInnerHTML={{__html: content}}></div>
               </div>
             </div>

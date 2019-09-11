@@ -6,18 +6,29 @@ import MyFoot from "c/foot";
 import { Table, InputGroup, FormControl, Button } from "react-bootstrap";
 import { withNamespaces } from "react-i18next";
 import axios from 'axios';
+import Link from "next/link";
 
 const COUNT = 10;
 
 class Submit extends React.Component {
   state = {
-    dataSource: [],
+    dataSource: [{
+          id: 1,
+          name: "everiToken",
+          rating: "B+",
+          risk: "stable",
+      },{
+        id: 2,
+        name: "quickchain",
+        rating: "C",
+        risk: "Rick+",
+    }],
     pageNo: 1,
     pageSize: 0,
   }
 
   componentDidMount() {
-    this.fetch();
+    // this.fetch();
   }
 
   fetch = () => {
@@ -35,6 +46,13 @@ class Submit extends React.Component {
         });
       })  
     });
+  }
+
+  handleNavigate(id){
+    this.props.history.push({
+      pathname : "/proSubDetail",
+      query:{ id: id }
+    })
   }
 
   render() {
@@ -69,11 +87,13 @@ class Submit extends React.Component {
             </thead>
             <tbody>
               {dataSource.map(item => (
-                <tr>
-                  <td>{item.name}</td>
-                  <td>{item.rating}</td>
-                  <td>{item.risk}</td>
-                </tr>
+                <Link href={`/proSubDetail?id=${item.id}`}>
+                  <tr>
+                    <td>{item.name}</td>
+                    <td>{item.rating}</td>
+                    <td>{item.risk}</td>
+                  </tr>
+                </Link>
               ))}
             </tbody>
           </Table>

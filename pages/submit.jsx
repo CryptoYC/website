@@ -12,23 +12,13 @@ const COUNT = 10;
 
 class Submit extends React.Component {
   state = {
-    dataSource: [{
-          id: 1,
-          name: "everiToken",
-          rating: "B+",
-          risk: "stable",
-      },{
-        id: 2,
-        name: "quickchain",
-        rating: "C",
-        risk: "Rick+",
-    }],
+    dataSource: [],
     pageNo: 1,
     pageSize: 0,
   }
 
   componentDidMount() {
-    // this.fetch();
+    this.fetch();
   }
 
   fetch = () => {

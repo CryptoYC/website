@@ -23,11 +23,7 @@ import 'style/proSubDetail.styl'
 
     fetch(id){
       const that = this
-      axios.get(`https://cryptoyc.net/survey/report/1`, {
-        params: {
-          id: id,
-        }
-      }).then(res => {
+      axios.get(`https://cryptoyc.net/survey/report/${id}`).then(res => {
         const { code, data, message } = res.data
         if(code == 200){
           console.log('getDetail: ', data)

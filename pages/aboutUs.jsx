@@ -17,7 +17,11 @@ const AboutUs = ({ t }) => {
         <img src="/static/images/aboutUs/0.png" alt=""/>
         <div className="content">
           <div className="title">{t("Whatwedo")}</div>
-          <div className="text">{t("do")}</div>
+          <div className="text">
+            {t("do")}<br/>
+            {t("do_2")}<br/>
+            {t("do_3")}
+          </div>
         </div>
       </div>
       <div className="contain_body text-center mx-auto" style={{ width: '90%'}}>

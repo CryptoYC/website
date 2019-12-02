@@ -1,4 +1,5 @@
 import React from "react";
+import ReactEcharts from 'echarts-for-react';
 import "style/index.styl";
 import MyNav from "c/nav_white";
 import Head from "c/head";

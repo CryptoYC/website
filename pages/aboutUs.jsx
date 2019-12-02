@@ -21,6 +21,7 @@ const AboutUs = ({ t }) => {
             {t("do")}<br/>
             {t("do_2")}<br/>
             {t("do_3")}
+            {/* CryptoYC team has been active in the Blockchain industry since 2014, with remarkable investment performance records.  CryptoYC has an in-depth understanding in the distribution system, computer security.  Moreover, we have established strong relationship and cooperation with several European renown Blockchain research institutions. */}
           </div>
         </div>
       </div>

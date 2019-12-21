@@ -39,7 +39,7 @@ class Home extends React.Component {
         <div className="foot">
           {/* {t('Welcome to React')} */}
           <Row>
-            <Col sm="4" c>
+            <Col sm="4">
               <div className="img-title text-left">
                 <Link href={{ pathname: "/" }}>
                   <a>
@@ -101,9 +101,9 @@ class Home extends React.Component {
                     <img src="/static/images/foot/weixin.png" alt="" />
                   </OverlayTrigger>
                 </Col>
-                {iconArr.map(key => {
+                {iconArr.map((key,index) => {
                   return (
-                    <Col sm="3" className="icon_item">
+                    <Col sm="3" className="icon_item" key={index}>
                       <a href={imageObj[key]}>
                         <img src={`/static/images/foot/${key}.png`} alt="" />
                       </a>

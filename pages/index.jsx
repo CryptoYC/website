@@ -15,8 +15,8 @@ const GetIcon = arr => {
   }
   return arr.map((e, index) => {
     return (
-      <React.Fragment>
-        <div key={e} className="column_center row_center icon_bg">
+      <React.Fragment key={index}>
+        <div className="column_center row_center icon_bg">
           <a
             rel="stylesheet"
             href={otherRouterConst[e] ? otherRouterConst[e].link : ""}
@@ -83,10 +83,11 @@ class Animate_text extends React.Component {
   }
   render() {
     const { text } = this.state;
+    var reactid = 0;
     return (
       <div className="animate">
         {text.map(e => (
-          <span className="gradually">{e}</span>
+          <span className="gradually" key={reactid++}>{e} </span>
         ))}
       </div>
     );
@@ -167,5 +168,4 @@ const Home = ({ t }) => (
     <MyFoot />
   </div>
 );
-
 export default withNamespaces("index")(Home);

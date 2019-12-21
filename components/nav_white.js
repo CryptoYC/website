@@ -50,7 +50,7 @@ const myNav = ({t}) => {
     return  <Container fluid="true">
     <Row className="nav white">
       <Col sm="4" className="logo">
-        <Link href={{ pathname: '/' }} style={{display: 'flex',alignItems: 'center'}}>
+        <Link href={{ pathname: '/' }} >
           <a>
             <img className="images" src="/static/images/index/17.png"></img>
           </a>

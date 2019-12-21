@@ -15,7 +15,7 @@ const GetIcon = arr => {
   }
   return arr.map((e, index) => {
     return (
-      <React.Fragment>
+      <React.Fragment key={index}>
         <Col sm="2" key={e} className="icon_padding">
           <a
             className="d-block icon_image"

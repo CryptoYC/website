@@ -43,7 +43,7 @@ const GetIcon = arr => {
   }
   return arr.map((e, index) => {
     return (
-      <React.Fragment>
+      <React.Fragment key={index}>
         {e ?
           (<div key={e} className="column_center row_center icon_bg">
             <a rel="stylesheet" href={URL[e - 1]}>

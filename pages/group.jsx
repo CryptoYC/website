@@ -97,10 +97,10 @@ class Group extends React.Component {
         <div className="list_item">
           <div className="title">{t("groupPeople")}</div>
           <Row className="flex_space-between">
-            <GetIcon arr={[3, 4, 5, 6, 7]} t={t} />
+            <GetIcon arr={[3, 25, 4, 5, 6]} t={t} />
           </Row>
           <Row className="flex_space-between">
-            <GetIcon arr={[9, 11, 12, 14, 25]} t={t} />
+            <GetIcon arr={[7, 9, 11, 12, 14]} t={t} />
           </Row>
         </div>
         <div className="list_item">
@@ -109,7 +109,7 @@ class Group extends React.Component {
             <GetIcon arr={[15, 16, 17, 21, 22]} t={t} />
           </Row>
           <Row className="flex_space-between">
-            <GetIcon arr={[23, 24]} t={t} />
+            <GetIcon arr={[23]} t={t} />
           </Row>
         </div>
 

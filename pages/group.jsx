@@ -108,11 +108,7 @@ class Group extends React.Component {
           <Row className="flex_space-between">
             <GetIcon arr={[15, 16, 17, 21, 22]} t={t} />
           </Row>
-          <Row className="flex_space-between">
-            <GetIcon arr={[23]} t={t} />
-          </Row>
         </div>
-
         <MyFoot />
       </div>
     );

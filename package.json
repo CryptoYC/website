@@ -3,7 +3,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build && next export",
-    "start": "next start",
+    "start": "set NODE_ENV=production && node server.js",
     "export": "next export"
   },
   "dependencies": {
@@ -11,6 +11,8 @@
     "antd": "^3.19.7",
     "axios": "^0.19.0",
     "bootstrap": "^4.3.1",
+    "echarts": "^4.6.0",
+    "echarts-for-react": "^2.0.15-beta.1",
     "express": "^4.17.1",
     "formik": "^1.5.7",
     "http-proxy-middleware": "^0.19.1",

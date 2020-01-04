@@ -136,4 +136,74 @@
     justify-content: space-evenly;
     margin: 15px auto;
   }
+
+
+  // 数据div
+  .list-item-data {
+    display: flex;
+    height: 400px;
+    padding-top: 0;
+    padding-bottom: 60px;
+    box-sizing: content-box;
+
+    .item-left,
+    .item-right {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .item-left {
+      flex: 4;
+      justify-content: space-between;
+
+      &>div {
+        display: flex;
+        flex-direction: column;
+        
+        span:first-child {
+          font-size: 34px;
+        }
+
+        span:last-child {
+          font-size: 16px;
+          font-weight: 600;
+          letter-spacing: 4.5px;
+        }
+      }
+
+      .more-button {
+        border: 1px solid #000;
+        width: 200px;
+        font-size: 20px;
+        font-weight: bold;
+        text-align: center;
+        padding: 5px 0;
+        cursor: pointer;
+        text-decoration: none;
+      }
+
+      .more-button:hover {
+        color: #000;
+      }
+    }
+
+    .item-right {
+      flex: 6;
+      padding: 10px;
+
+      .chart-market-mood {
+        position: relative;
+        top: 40px;
+        right: -40px;
+      }
+      
+      span {
+        width: 100%;
+        text-align: right;
+        font-size: 12px;
+        color: #999;
+      }
+    }
+  }
 }

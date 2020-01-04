@@ -3,6 +3,7 @@ import "style/index.styl";
 import MyNav from "c/nav_white";
 import Head from "c/head";
 import MyFoot from "c/foot";
+import ChartMarketMood from "c/chart_marketmood"
 import { Row, Col, Nav } from "react-bootstrap";
 import otherRouterConst from "../otherRouterConst";
 import { toOther } from "../router";
@@ -93,6 +94,26 @@ class Animate_text extends React.Component {
     );
   }
 }
+
+const GetMarketMood = () => {
+  return (
+    <div className="list_item list-item-data">
+      <div className="item-left">
+        <div>
+          <span>市场情绪指数</span>
+          <span>加密货币市场情绪分析</span>
+        </div>
+        <a className="more-button" href="/data">更多数据></a>
+      </div>
+      <div className="item-right">
+        <span>更新时间: 2019-11-25</span>
+        <ChartMarketMood></ChartMarketMood>
+        <span>数据来源: alternative.me</span>
+      </div>
+    </div>
+  )
+}
+
 const Home = ({ t }) => (
   <div className="index">
     <Head />
@@ -147,6 +168,7 @@ const Home = ({ t }) => (
         {GetIcon([8, 9, 10, 11, 12, 13, 14])}
       </div>
     </div>
+    {GetMarketMood()}
     <div
       className="list_item background_ece"
       style={{ paddingTop: 120, paddingBottom: 120 }}

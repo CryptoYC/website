@@ -24,7 +24,7 @@ class Arrow extends Component {
         </div>
     }
 }
- class JoinUs extends Component {
+class JoinUs extends Component {
     constructor() {
         super()
 
@@ -36,7 +36,7 @@ class Arrow extends Component {
 
     }
     render() {
-        const {t}=this.props
+        const { t } = this.props
         return <div className="joinUs">
             <Head></Head>
             <MyNav></MyNav>
@@ -65,7 +65,7 @@ class Arrow extends Component {
                             <img className="img_item" src="/static/images/joinUs/5.png" alt="" />
                         </Col>
                         <Col sm={{ span: 6, offset: 1 }} className="column_center">
-                        <div className="title">{t('label_2')}</div>
+                            <div className="title">{t('label_2')}</div>
                             <div>{t('text_2_1')}</div>
                             <div>{t('text_2_2')}</div>
                         </Col>
@@ -78,7 +78,7 @@ class Arrow extends Component {
                             <img className="img_item" src="/static/images/joinUs/6.png" alt="" />
                         </Col>
                         <Col sm={{ span: 6, offset: 1 }} className="column_center">
-                        <div className="title">{t('label_3')}</div>
+                            <div className="title">{t('label_3')}</div>
                             <div>{t('text_3_1')}</div>
                             <div>{t('text_3_2')}</div>
                         </Col>
@@ -89,7 +89,7 @@ class Arrow extends Component {
                             <img className="img_item" src="/static/images/joinUs/7.png" alt="" />
                         </Col>
                         <Col sm={{ span: 6, offset: 1 }} className="column_center">
-                        <div className="title">{t('label_4')}</div>
+                            <div className="title">{t('label_4')}</div>
                             <div>{t('text_4_1')}</div>
                             <div>{t('text_4_2')}</div>
                         </Col>
@@ -97,22 +97,34 @@ class Arrow extends Component {
                 </div>
                 <div className="job_vacancies">
                     <div className="head" id="job">{t('JobVacancy')}</div>
-                    <Accordion>
+                        <Accordion>
                         <Card>
                             <Card.Header>
                                 <Accordion.Toggle as='div' eventKey="0"><Arrow>{t('job_1')}</Arrow></Accordion.Toggle>
                             </Card.Header>
                             <Accordion.Collapse eventKey="0">
                                 <Card.Body>
-                                <img src={t('job_1_i')} alt=""/>
-                                    <div className="job_vacancies_foot">
-                                        <div className="head">投递简历</div>
-                                        <div style={{ textAlign: 'center' }}>zeno@CryptoYC.io</div>
-                                    </div>
+                                    <img src={t('job_1_i')} alt="" />
                                 </Card.Body>
                             </Accordion.Collapse>
                         </Card>
                     </Accordion>
+                    <Accordion>
+                        <Card>
+                            <Card.Header>
+                                <Accordion.Toggle as='div' eventKey="0"><Arrow>{t('job_2')}</Arrow></Accordion.Toggle>
+                            </Card.Header>
+                            <Accordion.Collapse eventKey="0">
+                                <Card.Body>
+                                    <img src={t('job_2_i')} alt="" />
+                                </Card.Body>
+                            </Accordion.Collapse>
+                        </Card>
+                    </Accordion>
+                    <div className="job_vacancies_foot">
+                        <div className="head">投递简历</div>
+                        <div style={{ textAlign: 'center' }}>zeno@cryptoyc.com</div>
+                    </div>
                 </div>
             </div>
             <MyFoot></MyFoot>

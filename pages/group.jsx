@@ -91,7 +91,7 @@ class Group extends React.Component {
             <GetIcon arr={[3, 4, 5, 6, 7]} t={t} />
           </Row>
           <Row className="flex_space-between">
-            <GetIcon arr={[9, 11, 12, 14]} t={t} />
+            <GetIcon arr={[9, 11, 12, 14, 25]} t={t} />
           </Row>
         </div>
         <div className="list_item">

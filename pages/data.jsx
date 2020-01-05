@@ -45,6 +45,7 @@ class Chain extends React.Component {
   }
   render() {
     const { t } = this.props;
+
     return (
       <div className="data-page">
         <Head />
@@ -52,7 +53,7 @@ class Chain extends React.Component {
         <div className="head">
           <img src="/static/images/dataPage/1.jpg" alt="" />
           <div className="content">
-            <div className="title">{t("DATA")}</div>
+            <div className="title">{t("data")}</div>
           </div>
         </div>
 
@@ -75,7 +76,7 @@ class Chain extends React.Component {
               </div>
               <div className="footer">
                 <span>更新时间: 2019年11月25日</span>
-                <span>数据来源: alternative.me</span>
+                <span>数据来源: troytrade.com</span>
               </div>
             </div>
           </div>
@@ -95,7 +96,7 @@ class Chain extends React.Component {
             </div>
             <div className="footer">
               <span>更新时间: 2019年11月25日</span>
-              <span>数据来源: alternative.me</span>
+              <span>数据来源: chain.info</span>
             </div>
           </div>
         </div>
@@ -105,4 +106,4 @@ class Chain extends React.Component {
   }
 }
 
-export default withNamespaces("Chain1")(Chain);
+export default withNamespaces("dataPage")(Chain);

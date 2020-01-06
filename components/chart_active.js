@@ -117,7 +117,7 @@ class chartActive extends React.Component {
           yAxisIndex: 1,
           data: btc_price,
           itemStyle: {
-            color: '#ff0015'
+            color: '#D77F0B'
           },
           showSymbol: false
         },
@@ -127,7 +127,7 @@ class chartActive extends React.Component {
           yAxisIndex: 1,
           data: eth_price,
           itemStyle: {
-            color: '#627346'
+            color: '#FBDEAE'
           },
           showSymbol: false
         },
@@ -136,7 +136,7 @@ class chartActive extends React.Component {
           type: 'bar',
           data: btc,
           itemStyle: {
-            color: '#DB3A47'
+            color: '#D52937'
           },
           barGap: 0
         },
@@ -145,7 +145,7 @@ class chartActive extends React.Component {
           type: 'bar',
           data: eth,
           itemStyle: {
-            color: '#131313'
+            color: '#607142'
           },
           barGap: 0
         }

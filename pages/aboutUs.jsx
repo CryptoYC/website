@@ -17,7 +17,12 @@ const AboutUs = ({ t }) => {
         <img src="/static/images/aboutUs/0.png" alt=""/>
         <div className="content">
           <div className="title">{t("Whatwedo")}</div>
-          <div className="text">{t("do")}</div>
+          <div className="text">
+            {t("do")}<br/>
+            {t("do_2")}<br/>
+            {t("do_3")}
+            {/* CryptoYC team has been active in the Blockchain industry since 2014, with remarkable investment performance records.  CryptoYC has an in-depth understanding in the distribution system, computer security.  Moreover, we have established strong relationship and cooperation with several European renown Blockchain research institutions. */}
+          </div>
         </div>
       </div>
       <div className="contain_body text-center mx-auto" style={{ width: '90%'}}>

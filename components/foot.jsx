@@ -15,7 +15,6 @@ const imageObj = {
   reddit: "https://www.reddit.com/user/CryptoYC"
 };
 const iconArr = [
-  "facebook",
   "github",
   "medium",
   "telegram",

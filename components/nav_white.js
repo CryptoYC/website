@@ -9,6 +9,7 @@ const navArr = [
   { type: 'string', text: 'benchmark', link: '/benchmark' },
   // { type: 'string', text: 'community', link: '/community' },
   { type: 'string', text: 'investment', link: '/investment' },
+  { type: 'string', text: 'data', link: '/data' },
   { type: 'string', text: 'blog', link: 'https://cryptoyc.github.io/' },
   {
     type: 'array', text: 'about', child: [
@@ -50,7 +51,7 @@ const myNav = ({t}) => {
     return  <Container fluid="true">
     <Row className="nav white">
       <Col sm="4" className="logo">
-        <Link href={{ pathname: '/' }} style={{display: 'flex',alignItems: 'center'}}>
+        <Link href={{ pathname: '/' }} >
           <a>
             <img className="images" src="/static/images/index/17.png"></img>
           </a>

@@ -10,7 +10,7 @@ const Head = props => (
   <NextHead>
     <meta charSet="UTF-8" />
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"/>
-    <title content={props.title}></title>
+    <title>{props.title || ''}</title>
     <link rel="shortcut icon" href="/static/favicon.ico" />
     <link
       rel="stylesheet"

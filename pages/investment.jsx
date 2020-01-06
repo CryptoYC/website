@@ -31,7 +31,8 @@ const URL = [
   "",
   "http://candaq.com",
   "https://sky.io",
-  "http://tezas.com"
+  "http://tezas.com",
+  "http://waterdrip.io"
 ];
 
 const GetIcon = arr => {
@@ -42,7 +43,7 @@ const GetIcon = arr => {
   }
   return arr.map((e, index) => {
     return (
-      <React.Fragment>
+      <React.Fragment key={index}>
         {e ?
           (<div key={e} className="column_center row_center icon_bg">
             <a rel="stylesheet" href={URL[e - 1]}>
@@ -82,7 +83,7 @@ const Investment = ({ t }) => (
     <div className="list_item">
       <div className="title">{t("PARTNERSHIP")}</div>
       <div className="icon-box">{GetIcon([18, 19, 20, 21, 22, 23, 24])}</div>
-      <div className="icon-box">{GetIcon([25, '', '', '', '', '', ''])}</div>
+      <div className="icon-box">{GetIcon([25, 26, '', '', '', '', ''])}</div>
     </div>
     <div className="list_item" style={{ paddingBottom: 120 }}>
       <div className="title">{t("INVESTMENTS")}</div>

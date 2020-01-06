@@ -10,6 +10,7 @@ import index from './index.json'
 import investment from './investment.json'
 import joinUs from './joinUs.json'
 import projectSubmitted from './projectSubmitted.json'
+import dataPage from './dataPage.json'
 export default{
-    foot,nav,aboutUs,benchmark,blog,community,contactUs,group,index,investment,joinUs,projectSubmitted
+    foot,nav,aboutUs,benchmark,blog,community,contactUs,group,index,investment,joinUs,projectSubmitted,dataPage
 }

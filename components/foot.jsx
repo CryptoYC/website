@@ -38,7 +38,7 @@ class Home extends React.Component {
         <div className="foot">
           {/* {t('Welcome to React')} */}
           <Row>
-            <Col sm="4" c>
+            <Col sm="4">
               <div className="img-title text-left">
                 <Link href={{ pathname: "/" }}>
                   <a>
@@ -50,7 +50,7 @@ class Home extends React.Component {
                 <div className="item nav-link">Redefine Tomorrow</div>
                 <div className="item nav-link"> </div>
                 <Nav.Link className="item">{t("privacy")}</Nav.Link>
-                <Nav.Link className="item">FAQ</Nav.Link>
+                <Nav.Link className="item" style={{marginTop: 20}}>FAQ</Nav.Link>
               </div>
             </Col>
             <Col sm="2"/>
@@ -100,9 +100,9 @@ class Home extends React.Component {
                     <img src="/static/images/foot/weixin.png" alt="" />
                   </OverlayTrigger>
                 </Col>
-                {iconArr.map(key => {
+                {iconArr.map((key,index) => {
                   return (
-                    <Col sm="3" className="icon_item">
+                    <Col sm="3" className="icon_item" key={index}>
                       <a href={imageObj[key]}>
                         <img src={`/static/images/foot/${key}.png`} alt="" />
                       </a>
@@ -113,8 +113,8 @@ class Home extends React.Component {
             </Col>
           </Row>
           <Row className="logo justify-content-between">
-            <Col className='pl-0' style={{marginTop: 53}} sm={{ span: 9 }}>@2019 CryptoYC.ALL RIGHTS Reserved</Col>
-            <Col className='text-right pr-0' style={{marginTop: 43}} sm={{ span: 3 }}>
+            <Col className='pl-0' style={{marginTop: 23}} sm={{ span: 9 }}>@2019 CryptoYC.ALL RIGHTS Reserved</Col>
+            <Col className='text-right pr-0' style={{marginTop: 13}} sm={{ span: 3 }}>
               <button onClick={changeI18}>中文 EN </button>
             </Col>
           </Row>

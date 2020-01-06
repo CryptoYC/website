@@ -48,9 +48,10 @@ const GetIcon = ({ arr, t }) => {
   for (let i = 0; i < 5 - length; i++) {
     spaceArr.push(1);
   }
+
   return arr.map((e, index) => {
     return (
-      <React.Fragment>
+      <React.Fragment key={index}>
         <Col key={e} sm="2" className="column_center row_center icon_padding">
           <img src={`/static/images/group/${e}.png`} alt="" />
           <C t={t}>
@@ -65,18 +66,8 @@ const GetIcon = ({ arr, t }) => {
             </div>
           </C>
         </Col>
-        {length < 5 &&
-          index + 1 == length &&
-          spaceArr.map(ee => {
-            return (
-              <Col
-                key={`${index}_${ee}`}
-                sm="2"
-                className="column_center row_center icon_padding"
-              />
-            );
-          })}
       </React.Fragment>
+      // TODO:我将这里代码删除了，看起来用处不大
     );
   });
 };

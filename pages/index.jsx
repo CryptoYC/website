@@ -4,6 +4,7 @@ import "style/index.styl";
 import MyNav from "c/nav_white";
 import Head from "c/head";
 import MyFoot from "c/foot";
+import ChartMarketMood from "c/chart_marketmood"
 import { Row, Col, Nav } from "react-bootstrap";
 import otherRouterConst from "../otherRouterConst";
 import { toOther } from "../router";
@@ -16,8 +17,8 @@ const GetIcon = arr => {
   }
   return arr.map((e, index) => {
     return (
-      <React.Fragment>
-        <div key={e} className="column_center row_center icon_bg">
+      <React.Fragment key={index}>
+        <div className="column_center row_center icon_bg">
           <a
             rel="stylesheet"
             href={otherRouterConst[e] ? otherRouterConst[e].link : ""}
@@ -41,6 +42,13 @@ const GetIcon = arr => {
     );
   });
 };
+
+const updataTime = (separator = '') =>{
+  let date = new Date().getDate();
+  let month = new Date().getMonth() + 1;
+  let year = new Date().getFullYear();
+  return `${year}${separator}${month < 10 ? `0${month}` : `${month}`}${separator}${date}`
+}
 class Animate_text extends React.Component {
   constructor(props) {
     super(props);
@@ -84,15 +92,36 @@ class Animate_text extends React.Component {
   }
   render() {
     const { text } = this.state;
+    var reactid = 0;
     return (
       <div className="animate">
         {text.map(e => (
-          <span className="gradually">{e}</span>
+          <span className="gradually" key={reactid++}>{e} </span>
         ))}
       </div>
     );
   }
 }
+
+const GetMarketMood = () => {
+  return (
+    <div className="list_item list-item-data">
+      <div className="item-left">
+        <div>
+          <span>市场情绪指数</span>
+          <span>加密货币市场情绪分析</span>
+        </div>
+        <a className="more-button" href="/data">更多数据></a>
+      </div>
+      <div className="item-right">
+        <span>更新时间: {updataTime("-")}</span>
+        <ChartMarketMood></ChartMarketMood>
+        <span>数据来源: alternative.me</span>
+      </div>
+    </div>
+  )
+}
+
 const Home = ({ t }) => (
   <div className="index">
     <Head />
@@ -104,20 +133,10 @@ const Home = ({ t }) => (
         <Animate_text text={[t("sam_3"), t("sam_4")]} />
       </div>
     </div>
-
-    <Row className="list_item background_ece">
-      <div className="believe w-75">{t("believes")}</div>
-      <Col sm="9" className="column_center w-100"> 
-        <div className="w-100">{t("believe_1")}</div>
-        <div className="w-100">{t("believe_2")}</div>
-      </Col>
-      <Col sm={{ span: 3 }} className="column_center flex-right">
-        <img className="images" src="/static/images/index/01.png" />
-      </Col>
-    </Row>
+    {GetMarketMood()}
     <Row
       className="list_item"
-      style={{ paddingTop: 254, paddingLeft: 303, paddingBottom: 160 }}
+      style={{ paddingTop: 104, paddingLeft: 303, paddingBottom: 60 }}
     > 
       <Col sm="3" className="column_center">
         <img className="images" src="/static/images/index/02.png" style={{marginTop: 120}} />
@@ -168,5 +187,7 @@ const Home = ({ t }) => (
     <MyFoot />
   </div>
 );
+
+
 
 export default withNamespaces("index")(Home);

@@ -38,7 +38,7 @@
 
     .charts {
       display: flex;
-      padding: 30px 40px; 
+      padding: 30px 40px;
 
       .chart-item {
         flex: 1;
@@ -46,7 +46,8 @@
         flex-direction: column;
         background: #ffffff;
         padding: 20px 30px 30px 30px;
-        box-shadow: 0 0 0 2px rgba(0, 0, 0, .05);
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
+        position: relative;
 
         .title {
           border-bottom: 1px solid #cccccc;
@@ -62,14 +63,45 @@
           color: #999;
           padding-top: 10px;
         }
-        
+
         .chart {
           height: 400px;
         }
+
+        .tips {
+          width: 25px;
+          height: 25px;
+          font-size: 18px;
+          margin-left: 10px;
+          border-radius: 50%;
+          background-color: rgb(200, 201, 201);
+          color: #fff;
+          text-align: center;
+          cursor: pointer;
+          display: inline-block;
+        }
+
+        .tips-box {
+          position: absolute;
+          right: -5px;
+          top: 42px;
+          width: 500px;
+          border-radius: 4px;
+          z-index: 100;
+          padding: 10px 20px;
+          color: #fff;
+          border: 1px solid #ddd;
+          background-color: rgba(95, 88, 86, 0.8);
+
+          p {
+            font-size: 11px;
+          }
+        }
       }
+
       .chart-item:first-child {
         margin-right: 30px;
-        
+
         .chart {
           position: relative;
           top: 50px;
@@ -80,12 +112,11 @@
     .rank {
       display: flex;
       padding: 30px 40px;
-
       flex-direction: column;
       background: #ffffff;
       padding: 20px 30px 30px 30px;
       margin: 0 40px;
-      box-shadow: 0 0 0 2px rgba(0, 0, 0, .05);
+      box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
 
       .title {
         border-bottom: 1px solid #cccccc;
@@ -106,18 +137,19 @@
         min-height: 200px;
 
         .item {
-          color: #A1A1A1;
+          color: #000;
           font-size: 15px;
           display: flex;
           justify-content: space-between;
           background: #fff;
           padding: 5px 0;
-          
+
           img {
             width: 24px;
             margin-right: 5px;
           }
-          .name{
+
+          .name {
             width: 20%;
           }
 

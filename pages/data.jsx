@@ -33,7 +33,8 @@ class Chain extends React.Component {
   constructor(p) {
     super(p);
     this.state = {
-      list: []
+      list: [],
+      showTips:false
     };
   }
   componentDidMount(){
@@ -60,7 +61,16 @@ class Chain extends React.Component {
         <div className="body-container">
           <div className="charts">
             <div className="chart-item">
-              <div className="title">市场情绪指数</div>
+              <div className="title">市场情绪指数<span className="tips" onClick={() => { this.setState({showTips:!this.state.showTips})   }}>?</span></div>
+              {this.state.showTips ? (<div className="tips-box">
+              <p>We are gathering data from the five following sources. Each data point is valued the same as the day before in order to visualize a meaningful progress in sentiment change of the crypto market.First of all, the current index is for bitcoin only (we offer separate indices for large alt coins soon), because a big part of it is the volatility of the coin price.</p>
+              <p>But let’s list all the different factors we’re including in the current index:</p>
+              <p>Volatility (25 %)</p>
+              <p>Market Momentum/Volume (25%)</p>
+              <p>Social Media (15%)</p>
+              <p>Surveys (15%)</p>
+              <p>Dominance (10%)</p>
+              </div>): ""}
               <div className="chart">
                 <ChartMarketMood />
               </div>

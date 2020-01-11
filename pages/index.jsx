@@ -42,13 +42,6 @@ const GetIcon = arr => {
     );
   });
 };
-
-const updataTime = (separator = '') =>{
-  let date = new Date().getDate();
-  let month = new Date().getMonth() + 1;
-  let year = new Date().getFullYear();
-  return `${year}${separator}${month < 10 ? `0${month}` : `${month}`}${separator}${date}`
-}
 class Animate_text extends React.Component {
   constructor(props) {
     super(props);
@@ -114,7 +107,7 @@ const GetMarketMood = () => {
         <a className="more-button" href="/data">更多数据></a>
       </div>
       <div className="item-right">
-        <span>更新时间: {updataTime("-")}</span>
+        <span>更新时间: 2019-11-25</span>
         <ChartMarketMood></ChartMarketMood>
         <span>数据来源: alternative.me</span>
       </div>

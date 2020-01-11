@@ -28,12 +28,6 @@ const getRank = (data) => {
   })
 }
 
-const updataTime = (separator = '') =>{
-  let date = new Date().getDate();
-  let month = new Date().getMonth() + 1;
-  let year = new Date().getFullYear();
-  return `${year}${separator}${month < 10 ? `0${month}` : `${month}`}${separator}${date}`
-}
 
 class Chain extends React.Component {
   constructor(p) {
@@ -81,7 +75,7 @@ class Chain extends React.Component {
                 <ChartMarketMood />
               </div>
               <div className="footer">
-                <span>更新时间: {updataTime("-")}</span>
+                <span>更新时间: 2019年11月25日</span>
                 <span>数据来源: alternative.me</span>
               </div>
             </div>
@@ -91,7 +85,7 @@ class Chain extends React.Component {
                 <ChartActive />
               </div>
               <div className="footer">
-                <span>更新时间: {updataTime("-")}</span>
+                <span>更新时间: 2019年11月25日</span>
                 <span>数据来源: troytrade.com</span>
               </div>
             </div>
@@ -111,7 +105,7 @@ class Chain extends React.Component {
               {getRank(this.state.list)}
             </div>
             <div className="footer">
-              <span>更新时间: {updataTime("-")}</span>
+              <span>更新时间: 2019年11月25日</span>
               <span>数据来源: chain.info</span>
             </div>
           </div>

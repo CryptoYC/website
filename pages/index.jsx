@@ -103,20 +103,20 @@ class Animate_text extends React.Component {
   }
 }
 
-const GetMarketMood = (t) => {
+const GetMarketMood = () => {
   return (
     <div className="list_item list-item-data">
       <div className="item-left">
         <div>
-          <span>{t("marketSentiment")}</span>
-          <span>{t("sentimentAnalysis")}</span>
+          <span>市场情绪指数</span>
+          <span>加密货币市场情绪分析</span>
         </div>
-        <a className="more-button" href="/data">{t("moreData")}></a>
+        <a className="more-button" href="/data">更多数据></a>
       </div>
       <div className="item-right">
-        <span>{t("Updated")}: {updataTime("-")}</span>
+        <span>更新时间: {updataTime("-")}</span>
         <ChartMarketMood></ChartMarketMood>
-        <span>{t("dataSources")}: alternative.me</span>
+        <span>数据来源: alternative.me</span>
       </div>
     </div>
   )

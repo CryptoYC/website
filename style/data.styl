@@ -36,6 +36,40 @@
     background: #eee;
     padding-bottom: 20px;
 
+    .tips {
+      width: 25px;
+      height: 25px;
+      font-size: 18px;
+      margin-left: 10px;
+      border-radius: 50%;
+      background-color: rgb(200, 201, 201);
+      color: #fff;
+      text-align: center;
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .tips-box {
+      position: absolute;
+      right: -5px;
+      top: 42px;
+      width: 500px;
+      border-radius: 4px;
+      z-index: 100;
+      padding: 10px 20px;
+      color: #fff;
+      border: 1px solid #ddd;
+      background-color: rgba(95, 88, 86, 0.8);
+
+      p {
+        font-size: 11px;
+      }
+    }
+    .rank_tips-box{
+      left: 186px;
+      top: 38px;  
+    }
+
     .charts {
       display: flex;
       padding: 30px 40px;
@@ -67,36 +101,6 @@
         .chart {
           height: 400px;
         }
-
-        .tips {
-          width: 25px;
-          height: 25px;
-          font-size: 18px;
-          margin-left: 10px;
-          border-radius: 50%;
-          background-color: rgb(200, 201, 201);
-          color: #fff;
-          text-align: center;
-          cursor: pointer;
-          display: inline-block;
-        }
-
-        .tips-box {
-          position: absolute;
-          right: -5px;
-          top: 42px;
-          width: 500px;
-          border-radius: 4px;
-          z-index: 100;
-          padding: 10px 20px;
-          color: #fff;
-          border: 1px solid #ddd;
-          background-color: rgba(95, 88, 86, 0.8);
-
-          p {
-            font-size: 11px;
-          }
-        }
       }
 
       .chart-item:first-child {
@@ -117,7 +121,7 @@
       padding: 20px 30px 30px 30px;
       margin: 0 40px;
       box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
-
+      position: relative;
       .title {
         border-bottom: 1px solid #cccccc;
         font-size: 24px;

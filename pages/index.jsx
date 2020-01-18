@@ -103,20 +103,20 @@ class Animate_text extends React.Component {
   }
 }
 
-const GetMarketMood = (t) => {
+const GetMarketMood = () => {
   return (
     <div className="list_item list-item-data">
       <div className="item-left">
         <div>
-          <span>{t("marketSentiment")}</span>
-          <span>{t("sentimentAnalysis")}</span>
+          <span>市场情绪指数</span>
+          <span>加密货币市场情绪分析</span>
         </div>
-        <a className="more-button" href="/data">{t("moreData")}></a>
+        <a className="more-button" href="/data">更多数据></a>
       </div>
       <div className="item-right">
-        <span>{t("Updated")}: {updataTime("-")}</span>
+        <span>更新时间: {updataTime("-")}</span>
         <ChartMarketMood></ChartMarketMood>
-        <span>{t("dataSources")}: alternative.me</span>
+        <span>数据来源: alternative.me</span>
       </div>
     </div>
   )
@@ -133,17 +133,7 @@ const Home = ({ t }) => (
         <Animate_text text={[t("sam_3"), t("sam_4")]} />
       </div>
     </div>
-
-    <Row className="list_item background_ece">
-      <div className="believe w-75">{t("believes")}</div>
-      <Col sm="9" className="column_center w-100 pl-0"> 
-        <div className="w-100">{t("believe_1")}</div>
-        <div className="w-100">{t("believe_2")}</div>
-      </Col>
-      <Col sm={{ span: 3 }} className="column_center flex-right">
-        <img className="images" src="/static/images/index/01.png" />
-      </Col>
-    </Row>
+    {GetMarketMood(t)}
     <Row
       className="list_item"
       style={{ paddingTop: 104, paddingLeft: 303, paddingBottom: 60 }}
@@ -176,7 +166,6 @@ const Home = ({ t }) => (
         {GetIcon([8, 9, 10, 11, 12, 13, 14])}
       </div>
     </div>
-    {GetMarketMood(t)}
     <div
       className="list_item background_ece"
       style={{ paddingTop: 120, paddingBottom: 120 }}

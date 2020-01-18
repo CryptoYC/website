@@ -1,6 +1,8 @@
 import React from 'react'
 import ReactEcharts from 'echarts-for-react'
 import { activePrice } from 'root/request'
+import { withNamespaces } from "react-i18next";
+
 
 class chartActive extends React.Component {
   state = {
@@ -9,7 +11,18 @@ class chartActive extends React.Component {
   componentDidMount() {
     this.getOption()
   }
+
+  componentWillUpdate(){
+    const { t } = this.props;
+    if(this.state.option.tooltip){
+      this.state.option.yAxis[0].name=t("addressNum")
+      this.state.option.yAxis[1].name=t("price")
+    }
+    
+    this.echarts_react.getEchartsInstance().setOption(this.state.option);
+  }
   getOption() {
+    const { t } = this.props;
     activePrice().then(res => {
       var btc, eth, btc_price, eth_price, time = [];
       btc = res.data.data.btc
@@ -74,14 +87,15 @@ class chartActive extends React.Component {
             shadowOffsetY: 2
           }
         }],
-        yAxis: [{
-          name:'活跃地址数',
+        yAxis: [
+          {
+          name: t("addressNum"),
           type: 'value',
-          nameTextStyle:{
-            color:'#9E9F9F',
-            fontSize:14,
-            align:'right',
-            padding:[4, -10, 4, 4]
+          nameTextStyle: {
+            color: '#9E9F9F',
+            fontSize: 14,
+            align: 'right',
+            padding: [4, -10, 4, 4]
           },
           axisLabel: {
             formatter: '{value}'
@@ -100,11 +114,11 @@ class chartActive extends React.Component {
           }
         },
         {
-          name:'价格($)',
-          nameTextStyle:{
-            color:'#9E9F9F',
-            fontSize:14,
-            padding:[4, -50, 4, 4]
+          name: t("price"),
+          nameTextStyle: {
+            color: '#9E9F9F',
+            fontSize: 14,
+            padding: [4, -50, 4, 4]
           },
           type: 'value',
           axisLabel: {
@@ -176,8 +190,10 @@ class chartActive extends React.Component {
   }
 
   render() {
+
     return (
       <ReactEcharts
+       ref={(e) => { this.echarts_react = e;}}
         option={this.state.option}
         style={
           {
@@ -189,5 +205,4 @@ class chartActive extends React.Component {
     )
   }
 }
-
-export default chartActive
+export default withNamespaces("index")(chartActive);

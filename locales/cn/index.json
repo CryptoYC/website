@@ -16,6 +16,25 @@
   "title_4":"联系我们",
   "email":"留言",
   "foot1":"区块链技术十分复杂,",
-  "foot2":"让我们为您提供最专业的服务"
-
+  "foot2":"让我们为您提供最专业的服务",
+  "marketSentiment": "市场情绪指数",
+  "sentimentAnalysis": "加密货币市场情绪分析",
+  "moreData": "更多数据",
+  "dataSources": "数据来源",
+  "Updated": "更新时间",
+  "itsExtreme": "极度恐惧",
+  "fear": "恐惧",
+  "greed": "贪婪",
+  "extremenGreed": "极度贪婪",
+  "addressNumPrice":"活跃地址数/价格",
+  "cryptocurrency":"交易所排行",
+  "ranking":"排行",
+  "exchange":"交易所",
+  "balance":"链上余额(BTC)",
+  "change":"24h涨跌幅",
+  "inFlow":"24h净流入(BTC)",
+  "largeDeposits":"24h大额充提笔数",
+  "address":"地址数",
+  "addressNum":"活跃地址数",
+  "price":"价格($)"
 }

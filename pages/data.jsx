@@ -40,7 +40,9 @@ class Chain extends React.Component {
     super(p);
     this.state = {
       list: [],
-      showTips:false
+      showTipsMarket:false,
+      showTipsActive:false,
+      showTipsDeal:false
     };
   }
   componentDidMount(){
@@ -67,52 +69,57 @@ class Chain extends React.Component {
         <div className="body-container">
           <div className="charts">
             <div className="chart-item">
-              <div className="title">市场情绪指数<span className="tips" onClick={() => { this.setState({showTips:!this.state.showTips})   }}>?</span></div>
-              {this.state.showTips ? (<div className="tips-box">
-              <p>We are gathering data from the five following sources. Each data point is valued the same as the day before in order to visualize a meaningful progress in sentiment change of the crypto market.First of all, the current index is for bitcoin only (we offer separate indices for large alt coins soon), because a big part of it is the volatility of the coin price.</p>
-              <p>But let’s list all the different factors we’re including in the current index:</p>
-              <p>Volatility (25 %)</p>
-              <p>Market Momentum/Volume (25%)</p>
-              <p>Social Media (15%)</p>
-              <p>Surveys (15%)</p>
-              <p>Dominance (10%)</p>
+              <div className="title">{t("marketSentiment")}<span className="tips" onClick={() => { this.setState({showTipsMarket:!this.state.showTipsMarket})   }}>?</span></div>
+              {this.state.showTipsMarket ? (<div className="tips-box">
+              <p>{t('showTipsMarket')}</p>
+              <p>{t('showTipsMarket_s1')}</p>
+              <p>{t('showTipsMarket_s2')}</p>
+              <p>{t('showTipsMarket_s3')}</p>
+              <p>{t('showTipsMarket_s4')}</p>
+              <p>{t('showTipsMarket_s5')}</p>
               </div>): ""}
               <div className="chart">
                 <ChartMarketMood />
               </div>
               <div className="footer">
-                <span>更新时间: {updataTime("-")}</span>
-                <span>数据来源: alternative.me</span>
+                <span>{t("Updated")}: {updataTime("-")}</span>
+                <span>{t("dataSources")}: alternative.me</span>
               </div>
             </div>
             <div className="chart-item">
-              <div className="title">活跃地址/价格</div>
+              <div className="title">{t("addressNumPrice")}<span className="tips" onClick={() => { this.setState({showTipsActive:!this.state.showTipsActive})   }}>?</span></div>
+              {this.state.showTipsActive ? (<div className="tips-box">
+              <p>{t('showTipsActive')}</p>
+              </div>): ""}
               <div className="chart">
                 <ChartActive />
               </div>
               <div className="footer">
-                <span>更新时间: {updataTime("-")}</span>
-                <span>数据来源: troytrade.com</span>
+                <span>{t("Updated")}: {updataTime("-")}</span>
+                <span>{t("dataSources")}: troytrade.com</span>
               </div>
             </div>
           </div>
           <div className="rank">
-            <div className="title">交易所排行</div>
+            <div className="title">{t("cryptocurrency")}<span className="tips" onClick={() => { this.setState({showTipsDeal:!this.state.showTipsDeal})   }}>?</span></div>
+            {this.state.showTipsDeal ? (<div className="tips-box rank_tips-box">
+            <p>{t('showTipsDeal')}</p>
+              </div>): ""}
             <div className="content">
               <div className="item">
-                <span>排行</span>
-                <span>交易所</span>
-                <span>链上余额(BTC)</span>
-                <span>24h涨跌幅</span>
-                <span>24h净流入(BTC)</span>
-                <span>24h大额充提笔数</span>
-                <span>地址数</span>
+                <span>{t("ranking")}</span>
+                <span>{t("exchange")}</span>
+                <span>{t("balance")}</span>
+                <span>{t("change")}</span>
+                <span>{t("inFlow")}</span>
+                <span>{t("largeDeposits")}</span>
+                <span>{t("address")}</span>
               </div>
               {getRank(this.state.list)}
             </div>
             <div className="footer">
-              <span>更新时间: {updataTime("-")}</span>
-              <span>数据来源: chain.info</span>
+              <span>{t("Updated")}: {updataTime("-")}</span>
+              <span>{t("dataSources")}: chain.info</span>
             </div>
           </div>
         </div>

@@ -6,10 +6,10 @@ import { withNamespaces } from 'react-i18next';
 import i18n from '../i18n';
 const navArr = [
   { type: 'string', text: 'home', link: '/' },
+  { type: 'string', text: 'data', link: '/data' },
   { type: 'string', text: 'benchmark', link: '/benchmark' },
   // { type: 'string', text: 'community', link: '/community' },
   { type: 'string', text: 'investment', link: '/investment' },
-  { type: 'string', text: 'data', link: '/data' },
   { type: 'string', text: 'blog', link: 'https://cryptoyc.github.io/' },
   {
     type: 'array', text: 'about', child: [

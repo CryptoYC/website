@@ -1,10 +1,10 @@
 import React from "react";
-import ReactEcharts from 'echarts-for-react';
+import ReactEcharts from "echarts-for-react";
 import "style/index.styl";
 import MyNav from "c/nav_white";
 import Head from "c/head";
 import MyFoot from "c/foot";
-import ChartMarketMood from "c/chart_marketmood"
+import ChartMarketMood from "c/chart_marketmood";
 import { Row, Col, Nav } from "react-bootstrap";
 import otherRouterConst from "../otherRouterConst";
 import { toOther } from "../router";
@@ -43,12 +43,14 @@ const GetIcon = arr => {
   });
 };
 
-const updataTime = (separator = '') =>{
+const updataTime = (separator = "") => {
   let date = new Date().getDate();
   let month = new Date().getMonth() + 1;
   let year = new Date().getFullYear();
-  return `${year}${separator}${month < 10 ? `0${month}` : `${month}`}${separator}${date}`
-}
+  return `${year}${separator}${
+    month < 10 ? `0${month}` : `${month}`
+  }${separator}${date}`;
+};
 class Animate_text extends React.Component {
   constructor(props) {
     super(props);
@@ -96,31 +98,56 @@ class Animate_text extends React.Component {
     return (
       <div className="animate">
         {text.map(e => (
-          <span className="gradually" key={reactid++}>{e} </span>
+          <span className="gradually" key={reactid++}>
+            {e}{" "}
+          </span>
         ))}
       </div>
     );
   }
 }
 
-const GetMarketMood = (t) => {
-  return (
-    <div className="list_item list-item-data">
-      <div className="item-left">
-        <div>
-        <span>{t("marketSentiment")}</span>
-          <span>{t("sentimentAnalysis")}</span>
+class GetMarketMood extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      showTipsMarket:false,
+    };
+  }
+  render() {
+    var {t} = this.props
+    return (
+      <div className="list_item list-item-data">
+        <div className="item-left">
+          <div className="item-market-con">
+            <span>{t("marketSentiment")}<i className="tips" onClick={() => { this.setState({showTipsMarket:!this.state.showTipsMarket})   }}>?</i></span>
+            {this.state.showTipsMarket ? (<div className="tips-box">
+              <p>{t('showTipsMarket')}</p>
+              <p>{t('showTipsMarket_s1')}</p>
+              <p>{t('showTipsMarket_s2')}</p>
+              <p>{t('showTipsMarket_s3')}</p>
+              <p>{t('showTipsMarket_s4')}</p>
+              <p>{t('showTipsMarket_s5')}</p>
+              </div>): ""}
+            <span>{t("sentimentAnalysis")}</span>
+          </div>
+          <a className="more-button" href="/data">
+            {t("moreData")}>
+          </a>
         </div>
-        <a className="more-button" href="/data">{t("moreData")}></a>
+        <div className="item-right">
+          <span>
+            {t("Updated")}: {updataTime("-")}
+          </span>
+          <ChartMarketMood></ChartMarketMood>
+          <span>{t("dataSources")}: alternative.me</span>
+        </div>
       </div>
-      <div className="item-right">
-      <span>{t("Updated")}: {updataTime("-")}</span>
-        <ChartMarketMood></ChartMarketMood>
-        <span>{t("dataSources")}: alternative.me</span>
-      </div>
-    </div>
-  )
+    );
+  }
 }
+
+
 
 const Home = ({ t }) => (
   <div className="index">
@@ -133,13 +160,17 @@ const Home = ({ t }) => (
         <Animate_text text={[t("sam_3"), t("sam_4")]} />
       </div>
     </div>
-    {GetMarketMood(t)}
+    <GetMarketMood t={t}/>
     <Row
       className="list_item"
       style={{ paddingTop: 104, paddingLeft: 303, paddingBottom: 60 }}
-    > 
+    >
       <Col sm="3" className="column_center">
-        <img className="images" src="/static/images/index/02.png" style={{marginTop: 120}} />
+        <img
+          className="images"
+          src="/static/images/index/02.png"
+          style={{ marginTop: 120 }}
+        />
       </Col>
       <Col sm="1" />
       <Col sm={{ span: 8 }} className="column_center">

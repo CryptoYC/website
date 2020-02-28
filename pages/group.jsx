@@ -67,7 +67,6 @@ const GetIcon = ({ arr, t }) => {
           </C>
         </Col>
       </React.Fragment>
-      // TODO:我将这里代码删除了，看起来用处不大
     );
   });
 };
@@ -88,10 +87,10 @@ class Group extends React.Component {
         <div className="list_item">
           <div className="title">{t("groupPeople")}</div>
           <Row className="flex_space-between">
-            <GetIcon arr={[3, 25, 4, 5, 6]} t={t} />
+            <GetIcon arr={[3, 25,  6,7,9]} t={t} />
           </Row>
           <Row className="flex_space-between">
-            <GetIcon arr={[7, 9, 11, 12, 14]} t={t} />
+            <GetIcon arr={[11, 12, 14]} t={t} />
           </Row>
         </div>
         <div className="list_item">
